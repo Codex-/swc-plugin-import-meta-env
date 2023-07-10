@@ -16,5 +16,12 @@
   "files": [
     "swc_plugin_import_meta_env.wasm"
   ],
-  "preferUnplugged": true
+  "preferUnplugged": true,
+  "packageManager": "pnpm@8.6.6",
+  "devDependencies": {
+    "@swc/core": "^1.3.68"
+  },
+  "peerDependencies": {
+    "@swc/core": "^1.3.68"
+  }
 }

@@ -22,33 +22,27 @@ jobs:
         run: |
           git config --system core.autocrlf false
           git config --system core.eol lf
-
       - uses: actions/checkout@v2
-        with:
-          submodules: true
-
+      - uses: pnpm/action-setup@v2.2.4
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-
+          node-version: 18
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
-          override: true
-
       - name: Configure path (windows)
         shell: bash
         if: runner.os == 'Windows'
         run: |
           echo 'C:\\npm\\prefix' >> $GITHUB_PATH
-
       - uses: Swatinem/rust-cache@v2
         with:
           shared-key: "cargo-test"
           cache-on-failure: true
-
       - name: Run cargo test
         run: |
-          cargo test --all --color always
+          cargo test --color always
