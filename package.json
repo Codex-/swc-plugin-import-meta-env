@@ -11,7 +11,8 @@
   "main": "swc_plugin_import_meta_env.wasm",
   "scripts": {
     "prepublishOnly": "cargo build-wasi --release",
-    "prepack": "cargo build-wasi --release && cp target/wasm32-wasi/release/swc_plugin_import_meta_env.wasm ."
+    "prepack": "cargo build-wasi --release && cp target/wasm32-wasi/release/swc_plugin_import_meta_env.wasm .",
+    "release": "release-it"
   },
   "files": [
     "swc_plugin_import_meta_env.wasm"
