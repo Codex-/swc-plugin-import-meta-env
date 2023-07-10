@@ -3,15 +3,16 @@
   "extends": ["config:base", ":dependencyDashboard"],
   "packageRules": [
     {
-      "packagePatterns": ["*"],
-      "enabled": false
+      "packagePatterns": ["*"]
     },
     {
-      "groupName": "swc_core",
-      "matchPackageNames": ["swc_core", "testing"],
-      "rangeStrategy": "bump",
-      "matchUpdateTypes": "major",
-      "enabled": true
+      "groupName": "swc",
+      "matchPackageNames": ["@swc", "swc_core"]
     }
-  ]
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+    "schedule": ["at any time"]
+  }
 }
