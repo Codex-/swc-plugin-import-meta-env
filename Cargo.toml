@@ -1,9 +1,9 @@
 [package]
-name = "swc-import-meta-env"
+name = "swc_plugin_import_meta_env"
 version = "0.1.0"
 edition = "2021"
 authors = ["Alex Miller <codex.nz@gmail.com>"]
-description = "Plugin for handling the transformation of import.meta.env"
+description = "SWC plugin for handling the transformation of import.meta.env"
 license = "Apache-2.0"
 
 [lib]
@@ -14,7 +14,6 @@ crate-type = ["cdylib"]
 lto = true
 
 [dependencies]
-serde = "1"
 swc_core = { version = "0.79.*", features = [
     "ecma_plugin_transform",
     "trace_macro",

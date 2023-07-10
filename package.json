@@ -1,5 +1,5 @@
 {
-  "name": "swc-import-meta-env",
+  "name": "swc-plugin-import-meta-env",
   "version": "0.1.0",
   "description": "@swc plugin for handling the transformation of import.meta.env",
   "author": "Alex Miller <codex.nz@gmail.com>",
