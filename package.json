@@ -20,6 +20,7 @@
   "packageManager": "pnpm@8.6.6",
   "devDependencies": {
     "@swc/core": "^1.3.68",
+    "auto-changelog": "^2.4.0",
     "release-it": "^16.1.0"
   },
   "peerDependencies": {
