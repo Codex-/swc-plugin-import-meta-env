@@ -9,17 +9,16 @@ license = "Apache-2.0"
 [lib]
 crate-type = ["cdylib"]
 
-[profile.release]
-# debug = true
-lto = true
-
 [dependencies]
 swc_core = { version = "0.79.*", features = [
     "ecma_plugin_transform",
     "trace_macro",
 ] }
-tracing = "0.1.37"
+tracing = { version = "0.1.37", features = ["release_max_level_info"] }
 
-# .cargo/config defines few alias to build plugin.
-# cargo build-wasi generates wasm-wasi32 binary
-# cargo build-wasm32 generates wasm32-unknown-unknown binary.
+[profile.release]
+codegen-units = 1
+# debug = true
+lto = true
+opt-level = "s"
+strip = "symbols"
