@@ -2,6 +2,8 @@
 
 > Simple plugin to transform `import.meta.env` to `process.env`
 
+[![npm](https://img.shields.io/npm/v/swc-plugin-import-meta-env.svg)](https://www.npmjs.com/package/swc-plugin-import-meta-env)
+
 This `@swc` plugin provides a simple transformation from `import.meta.env` to `process.env`.
 
 The original purpose of this was to allow `@swc` usage in a large Jest test suite while also using Vite for bundling.
