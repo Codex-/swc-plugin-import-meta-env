@@ -25,7 +25,7 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
       - name: Setup node
         uses: actions/setup-node@v2
@@ -42,9 +42,9 @@ jobs:
         run: cargo build --release --target wasm32-wasi
       - name: Registry auth
         run: pnpm set "//registry.npmjs.org/:_authToken" ${{ env.NPM_TOKEN }}
-      - name: config git user
+      - name: Config git user
         run: |
           git config --global user.name ${{ secrets.ACTION_GITHUB_NAME }};
           git config --global user.email ${{ secrets.ACTION_GITHUB_EMAIL }};
-      - name: perform release
+      - name: Perform release
         run: pnpm run release --ci ${{ github.event.inputs.version }}
