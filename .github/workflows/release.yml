@@ -1,5 +1,4 @@
 name: Release
-
 on:
   workflow_dispatch:
     inputs:
@@ -7,16 +6,15 @@ on:
         type: choice
         description: Version number to increment
         required: true
+        default: minor
         options:
           - patch
           - minor
           - major
-        default: minor
 
 jobs:
   release:
     env:
-      CARGO_INCREMENTAL: 0
       CI: true
       GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
