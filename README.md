@@ -11,7 +11,7 @@ The original purpose of this was to allow `@swc` usage in a large Jest test suit
 ## Install 🌱
 
 ```shell
-npm i -D swc-plugin-import-meta
+npm i -D swc-plugin-import-meta-env
 ```
 
 ## Usage 🚀
