@@ -50,38 +50,33 @@ test!(
     Default::default(),
     |_| as_folder(TransformVisitor),
     transform_import_meta_env,
-    r#"import.meta.env"#, // in
-    r#"process.env"#      // out
+    r#"import.meta.env"#
 );
 
 test!(
     Default::default(),
     |_| as_folder(TransformVisitor),
     transform_import_meta_env_prop,
-    r#"import.meta.env.MODE"#, // in
-    r#"process.env.MODE"#      // out
+    r#"import.meta.env.MODE"#
 );
 
 test!(
     Default::default(),
     |_| as_folder(TransformVisitor),
     transform_import_meta_env_key,
-    r#"import.meta.env["PROP"]"#, // in
-    r#"process.env["PROP"]"#      // out
+    r#"import.meta.env["PROP"]"#
 );
 
 test!(
     Default::default(),
     |_| as_folder(TransformVisitor),
     no_transform_import_meta,
-    r#"import.meta"#, // in
-    r#"import.meta"#  // out
+    r#"import.meta"#
 );
 
 test!(
     Default::default(),
     |_| as_folder(TransformVisitor),
     no_transform_import_meta_glob,
-    r#"import.meta.glob"#, // in
-    r#"import.meta.glob"#  // out
+    r#"import.meta.glob"#
 );
