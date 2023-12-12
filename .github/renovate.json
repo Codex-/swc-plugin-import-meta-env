@@ -1,6 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":dependencyDashboard"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "autoApprove": true,
+    "automerge": true,
+    "schedule": ["every 3 months on the first day of the month"]
+  },
   "packageRules": [
     {
       "packagePatterns": ["*"]
