@@ -6,13 +6,13 @@ settings:
 
 devDependencies:
   '@swc/core':
-    specifier: ^1.3.68
+    specifier: ^1.3.105
     version: 1.3.105
   auto-changelog:
     specifier: ^2.4.0
     version: 2.4.0
   release-it:
-    specifier: ^17.0.0
+    specifier: ^17.0.1
     version: 17.0.1
 
 packages:
