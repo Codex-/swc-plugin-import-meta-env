@@ -26,7 +26,7 @@
     "test": "pnpm run test:setup && pnpm run test:unit && pnpm run test:integration",
     "test:setup": "pnpm run build && cp target/wasm32-wasi/debug/swc_plugin_import_meta_env.wasm .",
     "test:unit": "cargo test --color always",
-    "test:integration": "pnpm exec jest --config ./tests/integration/jest.config.cjs"
+    "test:integration": "pnpm exec jest --config ./tests/integration/jest.config.cjs --no-cache"
   },
   "files": [
     "swc_plugin_import_meta_env.wasm"
