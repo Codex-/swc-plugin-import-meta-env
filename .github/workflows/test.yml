@@ -43,6 +43,5 @@ jobs:
         with:
           shared-key: "cargo-test"
           cache-on-failure: true
-      - name: Run cargo test
-        run: |
-          cargo test --color always
+      - name: Run tests
+        run: pnpm run test
