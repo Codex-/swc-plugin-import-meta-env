@@ -34,6 +34,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           profile: minimal
+          target: wasm32-wasi
       - name: Configure path (windows)
         shell: bash
         if: runner.os == 'Windows'
@@ -43,6 +44,5 @@ jobs:
         with:
           shared-key: "cargo-test"
           cache-on-failure: true
-      - name: Run cargo test
-        run: |
-          cargo test --color always
+      - name: Run tests
+        run: pnpm run test

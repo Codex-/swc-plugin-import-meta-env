@@ -10,7 +10,7 @@ license = "Apache-2.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-swc_core = { version = "0.88.*", features = [
+swc_core = { version = "0.87.*", features = [
     "ecma_plugin_transform",
     "trace_macro",
 ] }
