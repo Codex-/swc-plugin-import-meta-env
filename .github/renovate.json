@@ -1,6 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base", ":dependencyDashboard"],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
   "lockFileMaintenance": {
     "enabled": true,
     "autoApprove": true,
@@ -20,6 +22,7 @@
   "vulnerabilityAlerts": {
     "labels": ["security"],
     "automerge": true,
+    "autoApprove": true,
     "schedule": ["at any time"]
   }
 }
