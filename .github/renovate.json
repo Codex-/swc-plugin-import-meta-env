@@ -13,7 +13,8 @@
     },
     {
       "groupName": "swc",
-      "matchPackageNames": ["@swc", "swc_core"]
+      "matchPackageNames": ["swc_core"],
+      "matchPackagePatterns": ["@swc"]
     }
   ],
   "vulnerabilityAlerts": {
