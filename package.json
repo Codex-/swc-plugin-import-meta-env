@@ -32,7 +32,7 @@
     "swc_plugin_import_meta_env.wasm"
   ],
   "preferUnplugged": true,
-  "packageManager": "pnpm@8.15.0",
+  "packageManager": "pnpm@8.15.1",
   "devDependencies": {
     "@swc/core": "^1.4.0",
     "@swc/jest": "^0.2.36",
