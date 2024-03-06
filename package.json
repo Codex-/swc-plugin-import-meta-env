@@ -34,7 +34,7 @@
   "preferUnplugged": true,
   "packageManager": "pnpm@8.15.4",
   "devDependencies": {
-    "@swc/core": "^1.4.4",
+    "@swc/core": "^1.4.5",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
     "auto-changelog": "^2.4.0",
@@ -42,6 +42,6 @@
     "release-it": "^17.1.1"
   },
   "peerDependencies": {
-    "@swc/core": "^1.4.4"
+    "@swc/core": "^1.4.5"
   }
 }
