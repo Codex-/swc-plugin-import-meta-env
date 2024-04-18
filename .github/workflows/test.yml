@@ -23,18 +23,19 @@ jobs:
           git config --system core.autocrlf false
           git config --system core.eol lf
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3.0.0
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
       - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: pnpm
       - run: pnpm i --frozen-lockfile
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          target: wasm32-wasi
+      - name: Configure rustup
+        run: |
+          rustup set profile minimal
+          rustup target add wasm32-wasi
       - name: Configure path (windows)
         shell: bash
         if: runner.os == 'Windows'
