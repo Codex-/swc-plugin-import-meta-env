@@ -1,6 +1,6 @@
 {
   "name": "swc-plugin-import-meta-env",
-  "version": "1.4.12",
+  "version": "1.4.15",
   "description": "@swc plugin for handling the transformation of import.meta.env",
   "author": "Alex Miller <codex.nz@gmail.com>",
   "homepage": "https://github.com/Codex-/swc-plugin-import-meta-env#readme",
@@ -32,7 +32,7 @@
     "swc_plugin_import_meta_env.wasm"
   ],
   "preferUnplugged": true,
-  "packageManager": "pnpm@9.0.2",
+  "packageManager": "pnpm@9.0.3",
   "devDependencies": {
     "@swc/core": "^1.4.16",
     "@swc/jest": "^0.2.36",
