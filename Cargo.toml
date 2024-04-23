@@ -1,6 +1,6 @@
 [package]
 name = "swc_plugin_import_meta_env"
-version = "1.4.16"
+version = "1.4.17"
 edition = "2021"
 authors = ["Alex Miller <codex.nz@gmail.com>"]
 description = "SWC plugin for handling the transformation of import.meta.env"
