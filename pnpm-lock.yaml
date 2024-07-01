@@ -24,7 +24,7 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@20.14.9)
       release-it:
-        specifier: ^17.4.0
+        specifier: ^17.4.1
         version: 17.4.1
 
 packages:
