@@ -1,4 +1,4 @@
-interface ImportMeta {
+declare interface ImportMeta {
   readonly env: Record<string, any>;
 }
 
