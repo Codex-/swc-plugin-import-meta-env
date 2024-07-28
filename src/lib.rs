@@ -20,7 +20,7 @@ impl VisitMut for TransformVisitor {
 
         let member = n.as_mut_member().unwrap();
         if is_visiting_import_meta_env(member).is_some() {
-            let obj = Box::new(Ident::new("process".into(), DUMMY_SP).into());
+            let obj = Box::new(Ident::new_no_ctxt("process".into(), DUMMY_SP).into());
             member.obj = obj;
         }
     }
@@ -34,7 +34,7 @@ fn is_visiting_import_meta_env(n: &MemberExpr) -> Option<()> {
         return None;
     }
 
-    if prop.sym.to_string() != "env" {
+    if prop.sym != "env" {
         return None;
     }
 
