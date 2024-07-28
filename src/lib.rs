@@ -34,7 +34,7 @@ fn is_visiting_import_meta_env(n: &MemberExpr) -> Option<()> {
         return None;
     }
 
-    if prop.sym.to_string() != "env" {
+    if prop.sym != "env" {
         return None;
     }
 
