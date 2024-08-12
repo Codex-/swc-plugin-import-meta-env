@@ -34,7 +34,7 @@
   ],
   "preferUnplugged": true,
   "devDependencies": {
-    "@swc/core": "^1.7.6",
+    "@swc/core": "^1.7.10",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
     "auto-changelog": "^2.4.0",
@@ -42,6 +42,6 @@
     "release-it": "^17.6.0"
   },
   "peerDependencies": {
-    "@swc/core": "^1.7.6"
+    "@swc/core": "^1.7.10"
   }
 }
