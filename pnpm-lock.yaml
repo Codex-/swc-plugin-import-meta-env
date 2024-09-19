@@ -9,7 +9,7 @@ importers:
   .:
     devDependencies:
       '@swc/core':
-        specifier: ^1.7.25
+        specifier: ^1.7.26
         version: 1.7.26
       '@swc/jest':
         specifier: ^0.2.36
