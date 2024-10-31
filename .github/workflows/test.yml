@@ -23,6 +23,15 @@ jobs:
           git config --system core.autocrlf false
           git config --system core.eol lf
       - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - uses: pnpm/action-setup@v3
         with:
           version: 9
@@ -37,9 +46,5 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           echo 'C:\\npm\\prefix' >> $GITHUB_PATH
-      - uses: Swatinem/rust-cache@v2
-        with:
-          shared-key: "cargo-test"
-          cache-on-failure: true
       - name: Run tests
         run: pnpm run test
