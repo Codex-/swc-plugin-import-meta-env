@@ -1,19 +1,26 @@
 name: Release
 on:
   workflow_dispatch:
-    inputs:
-      version:
-        type: choice
-        description: Version number to increment
-        required: true
-        default: patch
-        options:
-          - patch
-          - minor
-          - major
 
 jobs:
+  should-release:
+    runs-on: ubuntu-latest
+    outputs:
+      should-release: ${{ steps.package.outputs.version != steps.swc.outputs.version }}
+      version: ${{ steps.swc.outputs.version }}
+    steps:
+      - name: Get current package version
+        id: package
+        run: |
+          echo "version=$(cat package.json | jq .version)" >> $GITHUB_ENV
+      - name: Get current package version
+        id: swc
+        run: |
+          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
+
   release:
+    needs: should-release
+    if: ${{ needs.should-release.outputs.should-release == 'true' }}
     env:
       CI: true
       GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
@@ -38,14 +45,18 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: pnpm
       - run: pnpm i --frozen-lockfile
+      - name: Get @swc/core version
+        id: swc_version
+        run: |
+          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
       - name: Configure rustup
         run: |
           rustup set profile minimal
           rustup target add wasm32-wasi
       - name: Install cargo bump
         run: cargo install cargo-bump
-      - name: Bump cargo version
-        run: cargo bump ${{ inputs.version }}
+      - name: Set cargo version
+        run: cargo bump ${{ steps.swc_version.outputs.version }}
       - name: Build plugin
         run: cargo build --release --target wasm32-wasi
       - name: Stage cargo changes
@@ -53,4 +64,4 @@ jobs:
       - name: Registry auth
         run: pnpm set "//registry.npmjs.org/:_authToken" ${{ env.NPM_TOKEN }}
       - name: Perform release
-        run: pnpm run release --ci ${{ github.event.inputs.version }}
+        run: pnpm run release --ci ${{ steps.swc_version.outputs.version }}
