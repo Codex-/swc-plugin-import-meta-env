@@ -23,7 +23,14 @@ jobs:
           git config --system core.autocrlf false
           git config --system core.eol lf
       - uses: actions/checkout@v4
-      - uses: asdf-vm/actions/install@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
       - run: pnpm i --frozen-lockfile
       - name: Configure path (windows)
         shell: bash
