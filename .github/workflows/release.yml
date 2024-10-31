@@ -9,6 +9,8 @@ jobs:
       should-release: ${{ steps.package.outputs.version != steps.swc.outputs.version }}
       version: ${{ steps.swc.outputs.version }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: asdf-vm/actions/install@v3
       - name: Get current package version
         id: package
         run: |
