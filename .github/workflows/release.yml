@@ -31,20 +31,33 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Need history for changelog generation
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
       - name: Config git user
         run: |
           git config --global user.name ${{ secrets.ACTION_GITHUB_USERNAME }};
           git config --global user.email ${{ secrets.ACTION_GITHUB_EMAIL }};
-      - uses: asdf-vm/actions/install@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
       - run: pnpm i --frozen-lockfile
       - name: Get @swc/core version
         id: swc_version
         run: |
           echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
-      - name: Configure rustup
-        run: |
-          rustup set profile minimal
-          rustup target add wasm32-wasi
       - name: Install cargo bump
         run: cargo install cargo-bump
       - name: Set cargo version
