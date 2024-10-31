@@ -41,10 +41,6 @@ jobs:
         id: swc_version
         run: |
           echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
-      - name: Configure rustup
-        run: |
-          rustup set profile minimal
-          rustup target add wasm32-wasi
       - name: Install cargo bump
         run: cargo install cargo-bump
       - name: Set cargo version
