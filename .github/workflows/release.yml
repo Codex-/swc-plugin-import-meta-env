@@ -14,11 +14,11 @@ jobs:
       - name: Get current package version
         id: package
         run: |
-          echo "version=$(cat package.json | jq .version)" >> $GITHUB_ENV
+          echo "version=$(cat package.json | jq .version)" >> $GITHUB_OUTPUT
       - name: Get current package version
         id: swc
         run: |
-          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
+          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_OUTPUT
 
   release:
     needs: should-release
@@ -56,14 +56,10 @@ jobs:
           registry-url: https://registry.npmjs.org
           cache: pnpm
       - run: pnpm i --frozen-lockfile
-      - name: Get @swc/core version
-        id: swc_version
-        run: |
-          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_ENV
       - name: Install cargo bump
         run: cargo install cargo-bump
       - name: Set cargo version
-        run: cargo bump ${{ steps.swc_version.outputs.version }}
+        run: cargo bump ${{ needs.should-release.outputs.version }}
       - name: Build plugin
         run: cargo build --release --target wasm32-wasi
       - name: Stage cargo changes
@@ -71,4 +67,4 @@ jobs:
       - name: Registry auth
         run: pnpm set "//registry.npmjs.org/:_authToken" ${{ env.NPM_TOKEN }}
       - name: Perform release
-        run: pnpm run release --ci ${{ steps.swc_version.outputs.version }}
+        run: pnpm run release --ci ${{ needs.should-release.outputs.version }}
