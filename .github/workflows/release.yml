@@ -10,7 +10,16 @@ jobs:
       version: ${{ steps.swc.outputs.version }}
     steps:
       - uses: actions/checkout@v4
-      - uses: asdf-vm/actions/install@v3
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 9
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+          registry-url: https://registry.npmjs.org
+          cache: pnpm
+      - run: pnpm i
       - name: Get current package version
         id: package
         run: |
