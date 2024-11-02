@@ -18,7 +18,7 @@ jobs:
       - name: Get current package version
         id: swc
         run: |
-          echo "version=$(pnpm list @swc/core --json | jq first.version)" >> $GITHUB_OUTPUT
+          echo "version=$(pnpm list @swc/core --json | jq 'first.devDependencies["@swc/core"].version')" >> $GITHUB_OUTPUT
 
   release:
     needs: should-release
