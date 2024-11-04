@@ -48,3 +48,8 @@ jobs:
           echo 'C:\\npm\\prefix' >> $GITHUB_PATH
       - name: Run tests
         run: pnpm run test
+  release:
+    needs: test
+    if: ${{ github.event_name == 'push' }}
+    secrets: inherit
+    uses: ./.github/workflows/release.yml
