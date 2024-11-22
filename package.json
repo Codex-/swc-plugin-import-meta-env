@@ -1,6 +1,6 @@
 {
   "name": "swc-plugin-import-meta-env",
-  "version": "1.9.2",
+  "version": "1.9.3",
   "description": "@swc plugin for handling the transformation of import.meta.env",
   "author": "Alex Miller <codex.nz@gmail.com>",
   "homepage": "https://github.com/Codex-/swc-plugin-import-meta-env#readme",
