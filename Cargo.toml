@@ -15,7 +15,7 @@ swc_core = { version = "1.0.6", features = [
     "ecma_plugin_transform",
     "trace_macro",
 ] }
-tracing = { version = "0.1.40", features = ["release_max_level_info"] }
+tracing = { version = "0.1.41", features = ["release_max_level_info"] }
 
 [profile.release]
 codegen-units = 1
