@@ -18,14 +18,14 @@
   ],
   "main": "swc_plugin_import_meta_env.wasm",
   "scripts": {
-    "build": "cargo build-wasi",
+    "build": "cargo build-wasip1",
     "build:release": "pnpm run build --release",
     "preinstall": "npx only-allow pnpm",
-    "prepublishOnly": "cargo build-wasi --release",
-    "prepack": "pnpm run build:release && cp target/wasm32-wasi/release/swc_plugin_import_meta_env.wasm .",
+    "prepublishOnly": "cargo build-wasip1 --release",
+    "prepack": "pnpm run build:release && cp target/wasm32-wasip1/release/swc_plugin_import_meta_env.wasm .",
     "release": "release-it",
     "test": "pnpm run test:setup && pnpm run test:unit && pnpm run test:integration",
-    "test:setup": "pnpm run build && cp target/wasm32-wasi/debug/swc_plugin_import_meta_env.wasm .",
+    "test:setup": "pnpm run build && cp target/wasm32-wasip1/debug/swc_plugin_import_meta_env.wasm .",
     "test:unit": "cargo test --color always",
     "test:integration": "pnpm exec jest --config ./tests/integration/jest.config.cjs --no-cache"
   },

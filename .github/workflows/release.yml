@@ -75,7 +75,7 @@ jobs:
       - name: Set cargo version
         run: cargo bump ${{ needs.should-release.outputs.version }}
       - name: Build plugin
-        run: cargo build --release --target wasm32-wasi
+        run: cargo build --release --target wasm32-wasip1
       - name: Stage cargo changes
         run: git stage Cargo.toml Cargo.lock
       - name: Registry auth
