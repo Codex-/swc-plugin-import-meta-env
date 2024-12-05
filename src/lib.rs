@@ -4,7 +4,7 @@ use swc_core::{
     ecma::{
         ast::{Expr, Ident, MemberExpr, MetaPropKind, Program},
         transforms::testing::test,
-        visit::{as_folder, FoldWith, VisitMut, VisitMutWith},
+        visit::{visit_mut_pass, VisitMut, VisitMutWith},
     },
 };
 
@@ -43,40 +43,40 @@ fn is_visiting_import_meta_env(n: &MemberExpr) -> Option<()> {
 
 #[plugin_transform]
 pub fn process_transform(program: Program, _metadata: TransformPluginProgramMetadata) -> Program {
-    program.fold_with(&mut as_folder(TransformVisitor))
+    program.apply(visit_mut_pass(TransformVisitor))
 }
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor),
+    |_| visit_mut_pass(TransformVisitor),
     transform_import_meta_env,
     r#"import.meta.env"#
 );
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor),
+    |_| visit_mut_pass(TransformVisitor),
     transform_import_meta_env_prop,
     r#"import.meta.env.MODE"#
 );
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor),
+    |_| visit_mut_pass(TransformVisitor),
     transform_import_meta_env_key,
     r#"import.meta.env["PROP"]"#
 );
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor),
+    |_| visit_mut_pass(TransformVisitor),
     no_transform_import_meta,
     r#"import.meta"#
 );
 
 test!(
     Default::default(),
-    |_| as_folder(TransformVisitor),
+    |_| visit_mut_pass(TransformVisitor),
     no_transform_import_meta_glob,
     r#"import.meta.glob"#
 );
