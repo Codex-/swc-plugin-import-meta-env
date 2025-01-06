@@ -1345,9 +1345,9 @@ dependencies = [
 
 [[package]]
 name = "swc_atoms"
-version = "3.0.0"
+version = "3.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "151a6feb82b989a087433baca7f6a6eb4fcf83f828c479eecd039c9312d60e10"
+checksum = "ba452d6867b57b0c3d210405bf01d3a77388451f3d02aa8f463e917fd213c7e0"
 dependencies = [
  "bytecheck",
  "hstr",
@@ -1393,9 +1393,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "9.0.4"
+version = "9.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "24707c1d8eab7fc8c114b5567b25bb1f5b344f74daae7502e35be5bcf4422df8"
+checksum = "92218aa213e8cf7d25b93594eb1517290c114eba9fcc54c3c844162438db8f2b"
 dependencies = [
  "once_cell",
  "swc_allocator",
@@ -1414,9 +1414,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_ast"
-version = "5.0.0"
+version = "5.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "94cf86f17358b93fcfe2876a9f0f7a7ebbff94cd6eaab4c809c7a0da1f4b892e"
+checksum = "82f448db2d1c52ffd2bd3788d89cafd8b5a75b97f0dc8aae00874dda2647f6b6"
 dependencies = [
  "bitflags",
  "bytecheck",
