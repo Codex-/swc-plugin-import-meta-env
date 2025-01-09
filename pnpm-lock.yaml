@@ -24,8 +24,8 @@ importers:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@22.10.3)
       release-it:
-        specifier: ^18.0.0
-        version: 18.0.0(@types/node@22.10.3)
+        specifier: ^18.1.1
+        version: 18.1.1(@types/node@22.10.3)
 
 packages:
 
@@ -1759,8 +1759,8 @@ packages:
     resolution: {integrity: sha512-+crtS5QjFRqFCoQmvGduwYWEBng99ZvmFvF+cUJkGYF1L1BfU8C6Zp9T7f5vPAwyLkUExpvK+ANVZmGU49qi4Q==}
     engines: {node: '>=12'}
 
-  release-it@18.0.0:
-    resolution: {integrity: sha512-aO7sGBwv+0m8FXVNT+RyL1yky9Nhg0IxkqJIdofTma0Dz4w9z0+u5DddzesOoYQL2fawib3Kwn30DaLxqiz5ng==}
+  release-it@18.1.1:
+    resolution: {integrity: sha512-rC/iVKri7U/Kp/Myujmsf7HG2gPq8My/LBVB72TbZZYKD14fmgDZC4Eyn8DD7Yh2h/G/YCCsRe1QQPrjXj9Mzg==}
     engines: {node: ^20.9.0 || >=22.0.0}
     hasBin: true
 
@@ -4137,7 +4137,7 @@ snapshots:
     dependencies:
       rc: 1.2.8
 
-  release-it@18.0.0(@types/node@22.10.3):
+  release-it@18.1.1(@types/node@22.10.3):
     dependencies:
       '@iarna/toml': 2.2.5
       '@octokit/rest': 21.0.2
