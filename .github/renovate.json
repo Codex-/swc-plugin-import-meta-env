@@ -3,10 +3,10 @@
   "extends": ["config:recommended", ":dependencyDashboard"],
   "labels": ["dependencies"],
   "rangeStrategy": "bump",
+  "autoApprove": true,
+  "automerge": true,
   "lockFileMaintenance": {
     "enabled": true,
-    "autoApprove": true,
-    "automerge": true,
     "schedule": ["every 3 months on the first day of the month"]
   },
   "packageRules": [
@@ -20,8 +20,6 @@
   ],
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "automerge": true,
-    "autoApprove": true,
     "schedule": ["at any time"]
   }
 }
