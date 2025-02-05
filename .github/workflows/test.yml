@@ -32,14 +32,7 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ runner.os }}-cargo
-      - uses: pnpm/action-setup@v3
-        with:
-          version: 9
-      - name: Setup node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: pnpm
+      - uses: jdx/mise-action@v2
       - run: pnpm i --frozen-lockfile
       - name: Configure path (windows)
         shell: bash
