@@ -1366,9 +1366,9 @@ checksum = "7da8b5736845d9f2fcb837ea5d9e2628564b3b043a70948a3f0b778838c5fb4f"
 
 [[package]]
 name = "swc_allocator"
-version = "3.0.0"
+version = "3.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a1f988452cab8c4e25776e5a855ba088cdb38fbe9714f9b9d2a6ff345824858"
+checksum = "d63ac41acf5c6d64fd1a8eccd4e53f30f45b6cfe86e8a4bcb40385068bbb1294"
 dependencies = [
  "bumpalo",
  "hashbrown 0.14.5",
@@ -1427,9 +1427,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "14.0.1"
+version = "14.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "624749807c67a0ceebbe6b8fce07b96186cd855ae3c4fb6be546634de91bd79b"
+checksum = "d3be889540f3495d5ee9d34b2d23ff1d44a1fd000f84fb917bfb47f0a1ed4d78"
 dependencies = [
  "once_cell",
  "swc_allocator",
