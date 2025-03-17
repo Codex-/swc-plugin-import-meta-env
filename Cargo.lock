@@ -1446,9 +1446,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "16.6.0"
+version = "16.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c341fee1c09c34a74f55d033895232d1b8858d860f4d9d10232ce083348a372d"
+checksum = "1bdc40ff1db02b1e32541b1fd8348406497554eb481f229b91f35c9563baebfb"
 dependencies = [
  "once_cell",
  "swc_allocator",
@@ -1467,9 +1467,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_ast"
-version = "8.0.0"
+version = "8.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c66db1e9b31f0f91ee0964aba014b4d2dfdc6c558732d106d762b43bedad2c4a"
+checksum = "22b5c514e22bcd65176a356c0bd2de295881b97079a45b991b98c4dca666ac78"
 dependencies = [
  "bitflags",
  "bytecheck",
