@@ -11,7 +11,7 @@ rust-version = "1.70"
 crate-type = ["cdylib"]
 
 [dependencies]
-swc_core = { version = "22.5.0", features = [
+swc_core = { version = "22.5.1", features = [
     "ecma_plugin_transform",
     "trace_macro",
 ] }
