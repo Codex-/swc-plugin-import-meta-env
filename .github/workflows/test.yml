@@ -39,8 +39,12 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           echo 'C:\\npm\\prefix' >> $GITHUB_PATH
-      - name: Run tests
-        run: pnpm run test
+      - name: Setup
+        run: pnpm run test:setup
+      - name: Unit tests
+        run: pnpm run test:unit
+      - name: Integration tests
+        run: pnpm run test:integration
   release:
     needs: test
     if: ${{ github.event_name == 'push' }}
