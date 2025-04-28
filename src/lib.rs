@@ -1,16 +1,20 @@
-use swc_core::plugin::{plugin_transform, proxies::TransformPluginProgramMetadata};
 use swc_core::{
     common::DUMMY_SP,
     ecma::{
         ast::{Expr, Ident, MemberExpr, MetaPropKind, Program},
         transforms::testing::test,
-        visit::{visit_mut_pass, VisitMut, VisitMutWith},
+        visit::{noop_visit_mut_type, visit_mut_pass, VisitMut, VisitMutWith},
     },
+    plugin::{plugin_transform, proxies::TransformPluginProgramMetadata},
+    trace_macro::swc_trace,
 };
 
 pub struct TransformVisitor;
 
+#[swc_trace]
 impl VisitMut for TransformVisitor {
+    noop_visit_mut_type!();
+
     fn visit_mut_expr(&mut self, n: &mut Expr) {
         n.visit_mut_children_with(self);
 
@@ -19,26 +23,22 @@ impl VisitMut for TransformVisitor {
         }
 
         let member = n.as_mut_member().unwrap();
-        if is_visiting_import_meta_env(member).is_some() {
+        if is_visiting_import_meta_env(member) {
             let obj = Box::new(Ident::new_no_ctxt("process".into(), DUMMY_SP).into());
             member.obj = obj;
         }
     }
 }
 
-fn is_visiting_import_meta_env(n: &MemberExpr) -> Option<()> {
-    let obj = n.obj.as_meta_prop()?;
-    let prop = n.prop.as_ident()?;
+fn is_visiting_import_meta_env(n: &MemberExpr) -> bool {
+    let Some(obj) = n.obj.as_meta_prop() else {
+        return false;
+    };
+    let Some(prop) = n.prop.as_ident() else {
+        return false;
+    };
 
-    if obj.kind != MetaPropKind::ImportMeta {
-        return None;
-    }
-
-    if prop.sym != "env" {
-        return None;
-    }
-
-    Some(())
+    obj.kind == MetaPropKind::ImportMeta && prop.sym == "env"
 }
 
 #[plugin_transform]
