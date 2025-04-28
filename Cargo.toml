@@ -19,7 +19,6 @@ tracing = { version = "0.1.41", features = ["release_max_level_info"] }
 
 [profile.release]
 codegen-units = 1
-# debug = true
 lto = true
 opt-level = "s"
 strip = "symbols"
