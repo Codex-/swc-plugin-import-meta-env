@@ -1477,9 +1477,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "22.5.2"
+version = "22.5.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39b5f70fe5f8db1d3977aae3f2ecb64bae55d0e4f5ec93d372219f2ecf58e372"
+checksum = "2051c6159ef5b26060fede1fcf1bd1ddbabaa5d669f0adc180af16f19aba120c"
 dependencies = [
  "once_cell",
  "swc_allocator",
@@ -1765,9 +1765,9 @@ dependencies = [
 
 [[package]]
 name = "swc_trace_macro"
-version = "2.0.0"
+version = "2.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c78717a841565df57f811376a3d19c9156091c55175e12d378f3a522de70cef"
+checksum = "559185db338f1bcb50297aafd4f79c0956c84dc71a66da4cffb57acf9d93fd88"
 dependencies = [
  "proc-macro2",
  "quote",
