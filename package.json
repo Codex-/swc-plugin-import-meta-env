@@ -37,7 +37,7 @@
   "devDependencies": {
     "@swc/core": "^1.12.1",
     "@swc/jest": "^0.2.38",
-    "@types/jest": "^29.5.14",
+    "@types/jest": "^30.0.0",
     "auto-changelog": "^2.5.0",
     "jest": "^30.0.0",
     "release-it": "^19.0.3"
