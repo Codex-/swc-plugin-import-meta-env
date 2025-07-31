@@ -1405,9 +1405,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "34.0.3"
+version = "34.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4638e0e6fac7184531bd67e4244a4a27ceec81cd039171ceb5649456816f8346"
+checksum = "49bdd38caa35501b140a0344e1aeed8d6173f0fa2c55da9d9181ccc65a32f327"
 dependencies = [
  "swc_allocator",
  "swc_atoms",
