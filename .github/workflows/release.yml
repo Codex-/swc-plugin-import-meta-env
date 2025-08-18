@@ -15,7 +15,7 @@ jobs:
       version: ${{ steps.swc.outputs.version }}
     steps:
       - uses: actions/checkout@v5
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
       - run: pnpm i
       - name: Get current package version
         id: package
@@ -52,7 +52,7 @@ jobs:
         run: |
           git config --global user.name ${{ secrets.ACTION_GITHUB_USERNAME }};
           git config --global user.email ${{ secrets.ACTION_GITHUB_EMAIL }};
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
       - run: pnpm i --frozen-lockfile
       - name: Install cargo bump
         run: cargo install cargo-bump

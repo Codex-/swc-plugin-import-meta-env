@@ -32,7 +32,7 @@ jobs:
             ~/.cargo/git/db/
             target/
           key: ${{ runner.os }}-cargo
-      - uses: jdx/mise-action@v2
+      - uses: jdx/mise-action@v3
       - run: pnpm i --frozen-lockfile
       - name: Configure path (windows)
         shell: bash
