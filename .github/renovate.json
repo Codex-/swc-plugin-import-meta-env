@@ -5,21 +5,20 @@
   "rangeStrategy": "bump",
   "autoApprove": true,
   "automerge": true,
+  "automergeType": "branch",
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["every 3 months on the first day of the month"]
   },
   "packageRules": [
     {
-      "matchPackageNames": ["*"]
-    },
-    {
       "groupName": "swc",
-      "matchPackageNames": ["/@swc/", "swc_core"]
+      "matchPackagePatterns": ["^@swc/"],
+      "matchPackageNames": ["swc_core"]
     }
   ],
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "schedule": ["at any time"]
+    "automerge": true
   }
 }
