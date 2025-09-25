@@ -13,8 +13,7 @@
   "packageRules": [
     {
       "groupName": "swc",
-      "matchPackagePatterns": ["^@swc/"],
-      "matchPackageNames": ["swc_core"]
+      "matchPackageNames": ["/^@swc//", "swc_core"]
     }
   ],
   "vulnerabilityAlerts": {
