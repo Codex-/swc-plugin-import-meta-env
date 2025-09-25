@@ -18,14 +18,10 @@ impl VisitMut for TransformVisitor {
     fn visit_mut_expr(&mut self, n: &mut Expr) {
         n.visit_mut_children_with(self);
 
-        if !n.is_member() {
-            return;
-        }
-
-        let member = n.as_mut_member().unwrap();
-        if is_visiting_import_meta_env(member) {
-            let obj = Box::new(Ident::new_no_ctxt("process".into(), DUMMY_SP).into());
-            member.obj = obj;
+        if let Expr::Member(member) = n {
+            if is_visiting_import_meta_env(member) {
+                member.obj = Box::new(Ident::new_no_ctxt("process".into(), DUMMY_SP).into());
+            }
         }
     }
 }
