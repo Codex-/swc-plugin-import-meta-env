@@ -1649,7 +1649,7 @@ dependencies = [
 
 [[package]]
 name = "swc_plugin_import_meta_env"
-version = "1.13.19"
+version = "1.13.20"
 dependencies = [
  "swc_core",
  "tracing",
