@@ -7,6 +7,9 @@ concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
 
+permissions:
+  id-token: write # Required for NPM OIDC
+
 jobs:
   should-release:
     runs-on: ubuntu-latest
@@ -32,7 +35,6 @@ jobs:
     env:
       CI: true
       GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       RUST_LOG: debug
     runs-on: ubuntu-latest
     steps:
@@ -63,6 +65,6 @@ jobs:
       - name: Stage cargo changes
         run: git stage Cargo.toml Cargo.lock
       - name: Registry auth
-        run: pnpm set "//registry.npmjs.org/:_authToken" ${{ env.NPM_TOKEN }}
+        run: pnpm config set registry="https://registry.npmjs.org"
       - name: Perform release
         run: pnpm run release --ci ${{ needs.should-release.outputs.version }}
