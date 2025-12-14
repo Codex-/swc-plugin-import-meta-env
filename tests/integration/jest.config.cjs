@@ -1,6 +1,7 @@
 module.exports = {
   transform: {
-    "^.+\\.[jt]s$": [
+    // JS
+    "^.+\\.js$": [
       "@swc/jest",
       {
         jsc: {
@@ -9,6 +10,68 @@ module.exports = {
               [require.resolve("../../swc_plugin_import_meta_env.wasm"), {}],
             ],
           },
+          parser: {
+            syntax: "ecmascript",
+          },
+        },
+        module: {
+          type: "commonjs",
+        },
+      },
+    ],
+    // TS
+    "^.+\\.ts$": [
+      "@swc/jest",
+      {
+        jsc: {
+          experimental: {
+            plugins: [
+              [require.resolve("../../swc_plugin_import_meta_env.wasm"), {}],
+            ],
+          },
+          parser: {
+            syntax: "typescript",
+          },
+        },
+        module: {
+          type: "commonjs",
+        },
+      },
+    ],
+    // JSX
+    "^.+\\.jsx$": [
+      "@swc/jest",
+      {
+        jsc: {
+          experimental: {
+            plugins: [
+              [require.resolve("../../swc_plugin_import_meta_env.wasm"), {}],
+            ],
+          },
+          parser: {
+            syntax: "ecmascript",
+            jsx: true,
+          },
+        },
+        module: {
+          type: "commonjs",
+        },
+      },
+    ],
+    // TSX
+    "^.+\\.tsx$": [
+      "@swc/jest",
+      {
+        jsc: {
+          experimental: {
+            plugins: [
+              [require.resolve("../../swc_plugin_import_meta_env.wasm"), {}],
+            ],
+          },
+          parser: {
+            syntax: "typescript",
+            jsx: true,
+          },
         },
         module: {
           type: "commonjs",
@@ -16,7 +79,8 @@ module.exports = {
       },
     ],
   },
-  testRegex: "(\\.|/)(test)\\.([jt]s)$",
-  moduleFileExtensions: ["js", "ts"],
+  testEnvironment: "@happy-dom/jest-environment",
+  testRegex: "(\\.|/)(test)\\.([jt]sx?)$",
+  moduleFileExtensions: ["js", "jsx", "ts", "tsx"],
   moduleDirectories: ["src", "node_modules"],
 };
