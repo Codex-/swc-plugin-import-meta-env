@@ -9,34 +9,34 @@ importers:
   .:
     devDependencies:
       '@happy-dom/jest-environment':
-        specifier: ^20.0.11
+        specifier: 20.0.11
         version: 20.0.11(@jest/environment@30.2.0)(@jest/fake-timers@30.2.0)(@jest/types@30.2.0)(jest-mock@30.2.0)(jest-util@30.2.0)
       '@swc/core':
-        specifier: ^1.15.4
+        specifier: 1.15.4
         version: 1.15.4
       '@swc/jest':
-        specifier: ^0.2.39
+        specifier: 0.2.39
         version: 0.2.39(@swc/core@1.15.4)
       '@testing-library/react':
-        specifier: ^16.3.0
+        specifier: 16.3.0
         version: 16.3.0(@testing-library/dom@10.4.1)(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@types/jest':
-        specifier: ^30.0.0
+        specifier: 30.0.0
         version: 30.0.0
       '@types/react':
-        specifier: ^19.2.7
+        specifier: 19.2.7
         version: 19.2.7
       auto-changelog:
-        specifier: ^2.5.0
+        specifier: 2.5.0
         version: 2.5.0
       jest:
-        specifier: ^30.2.0
+        specifier: 30.2.0
         version: 30.2.0(@types/node@24.10.1)
       react:
-        specifier: ^19.2.3
+        specifier: 19.2.3
         version: 19.2.3
       release-it:
-        specifier: ^19.1.0
+        specifier: 19.1.0
         version: 19.1.0(@types/node@24.10.1)
 
 packages:
