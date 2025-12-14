@@ -10,5 +10,8 @@
   },
   "hooks": {
     "after:bump": "npx auto-changelog -p"
+  },
+  "npm": {
+    "skipChecks": true
   }
 }

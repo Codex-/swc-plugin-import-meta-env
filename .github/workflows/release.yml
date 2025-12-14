@@ -8,6 +8,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  contents: write # For git operations
   id-token: write # Required for NPM OIDC
 
 jobs:
@@ -34,7 +35,6 @@ jobs:
     if: ${{ needs.should-release.outputs.should-release == 'true' }}
     env:
       CI: true
-      GITHUB_TOKEN: ${{ secrets.ACTION_GITHUB_TOKEN }}
       RUST_LOG: debug
     runs-on: ubuntu-latest
     steps:
@@ -67,4 +67,6 @@ jobs:
       - name: Registry auth
         run: pnpm config set registry="https://registry.npmjs.org"
       - name: Perform release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: pnpm run release --ci ${{ needs.should-release.outputs.version }}
