@@ -35,7 +35,7 @@
   ],
   "preferUnplugged": true,
   "devDependencies": {
-    "@happy-dom/jest-environment": "20.3.1",
+    "@happy-dom/jest-environment": "20.3.4",
     "@swc/core": "1.15.8",
     "@swc/jest": "0.2.39",
     "@testing-library/react": "16.3.2",
