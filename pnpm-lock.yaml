@@ -35,6 +35,9 @@ importers:
       react:
         specifier: 19.2.3
         version: 19.2.3
+      react-dom:
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
       release-it:
         specifier: 19.2.4
         version: 19.2.4(@types/node@25.0.10)
