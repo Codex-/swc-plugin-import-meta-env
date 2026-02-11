@@ -40,7 +40,7 @@
     "@swc/jest": "0.2.39",
     "@testing-library/react": "16.3.2",
     "@types/jest": "30.0.0",
-    "@types/react": "19.2.13",
+    "@types/react": "19.2.14",
     "auto-changelog": "2.5.0",
     "jest": "30.2.0",
     "react": "19.2.4",
