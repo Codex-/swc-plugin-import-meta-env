@@ -43,8 +43,8 @@
     "@types/react": "19.2.14",
     "auto-changelog": "2.5.0",
     "jest": "30.3.0",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "react": "19.2.5",
+    "react-dom": "19.2.5",
     "release-it": "19.2.4"
   },
   "peerDependencies": {
