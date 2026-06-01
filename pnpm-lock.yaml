@@ -27,8 +27,8 @@ importers:
         specifier: 19.2.15
         version: 19.2.15
       auto-changelog:
-        specifier: 2.5.1
-        version: 2.5.1
+        specifier: 2.6.0
+        version: 2.6.0
       jest:
         specifier: 30.4.2
         version: 30.4.2(@types/node@25.5.0)
@@ -901,8 +901,8 @@ packages:
   async-retry@1.3.3:
     resolution: {integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==}
 
-  auto-changelog@2.5.1:
-    resolution: {integrity: sha512-vpG10KkmGaeMHwvCK2G+4j6e1+ZxVnhDadHnbG0sFuiB2fzAPIybicp5782btmf4+UGfHklVCUcHWZyN3YiXKg==}
+  auto-changelog@2.6.0:
+    resolution: {integrity: sha512-jJgUkuWXQ7fPLPXOMQk/XSSmy7KvzpzhjJa6w660dq1KTEez/GW2CPckBra3jMMMMpcwxp84bOslo29qRCewzA==}
     engines: {node: '>= 10'}
     hasBin: true
 
@@ -1974,6 +1974,11 @@ packages:
 
   semver@7.7.4:
     resolution: {integrity: sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==}
+    engines: {node: '>=10'}
+    hasBin: true
+
+  semver@7.8.1:
+    resolution: {integrity: sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -3144,13 +3149,13 @@ snapshots:
     dependencies:
       retry: 0.13.1
 
-  auto-changelog@2.5.1:
+  auto-changelog@2.6.0:
     dependencies:
       commander: 7.2.0
       handlebars: 4.7.9
       import-cwd: 3.0.0
       parse-github-url: 1.0.4
-      semver: 7.7.4
+      semver: 7.8.1
 
   babel-jest@30.4.1(@babel/core@7.29.0):
     dependencies:
@@ -4393,6 +4398,8 @@ snapshots:
   semver@6.3.1: {}
 
   semver@7.7.4: {}
+
+  semver@7.8.1: {}
 
   shebang-command@2.0.0:
     dependencies:
