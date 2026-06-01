@@ -45,7 +45,7 @@
     "jest": "30.4.2",
     "react": "19.2.6",
     "react-dom": "19.2.6",
-    "release-it": "20.0.1"
+    "release-it": "20.2.0"
   },
   "peerDependencies": {
     "@swc/core": ">=1.15.4"
