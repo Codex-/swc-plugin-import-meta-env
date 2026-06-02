@@ -40,11 +40,11 @@
     "@swc/jest": "0.2.39",
     "@testing-library/react": "16.3.2",
     "@types/jest": "30.0.0",
-    "@types/react": "19.2.15",
+    "@types/react": "19.2.16",
     "auto-changelog": "2.6.0",
     "jest": "30.4.2",
-    "react": "19.2.6",
-    "react-dom": "19.2.6",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
     "release-it": "20.2.0"
   },
   "peerDependencies": {
