@@ -18,7 +18,7 @@ jobs:
       should-release: ${{ steps.package.outputs.version != steps.swc.outputs.version }}
       version: ${{ steps.swc.outputs.version }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: jdx/mise-action@v4
       - run: pnpm i
       - name: Get current package version
@@ -38,7 +38,7 @@ jobs:
       RUST_LOG: debug
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # Need history for changelog generation
       - uses: actions/cache@v5
