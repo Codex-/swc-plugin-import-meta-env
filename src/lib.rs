@@ -6,12 +6,10 @@ use swc_core::{
         visit::{noop_visit_mut_type, visit_mut_pass, VisitMut, VisitMutWith},
     },
     plugin::{plugin_transform, proxies::TransformPluginProgramMetadata},
-    trace_macro::swc_trace,
 };
 
 pub struct TransformVisitor;
 
-#[swc_trace]
 impl VisitMut for TransformVisitor {
     noop_visit_mut_type!();
 
