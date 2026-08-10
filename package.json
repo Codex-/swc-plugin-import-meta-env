@@ -48,6 +48,6 @@
     "release-it": "21.0.2"
   },
   "peerDependencies": {
-    "@swc/core": ">=1.15.4"
+    "@swc/core": ">=1.15.47"
   }
 }
