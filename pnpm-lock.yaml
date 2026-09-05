@@ -27,8 +27,8 @@ importers:
         specifier: 19.2.18
         version: 19.2.18
       auto-changelog:
-        specifier: 2.6.0
-        version: 2.6.0
+        specifier: 2.6.1
+        version: 2.6.1
       jest:
         specifier: 30.5.1
         version: 30.5.1(@types/node@26.2.0)(supports-color@8.1.1)
@@ -1013,8 +1013,8 @@ packages:
   async-retry@1.3.3:
     resolution: {integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==}
 
-  auto-changelog@2.6.0:
-    resolution: {integrity: sha512-jJgUkuWXQ7fPLPXOMQk/XSSmy7KvzpzhjJa6w660dq1KTEez/GW2CPckBra3jMMMMpcwxp84bOslo29qRCewzA==}
+  auto-changelog@2.6.1:
+    resolution: {integrity: sha512-YQJgU1i/qWTk8W/IIE6oUk1DBYr/jiFbksP+LuGRHOzmhviIGhK1otjqSSMUf2aqUdeOW8SUYNSZjiD6Qcun7w==}
     engines: {node: '>= 10'}
     hasBin: true
 
@@ -3301,7 +3301,7 @@ snapshots:
     dependencies:
       retry: 0.13.1
 
-  auto-changelog@2.6.0:
+  auto-changelog@2.6.1:
     dependencies:
       commander: 7.2.0
       handlebars: 4.7.9
