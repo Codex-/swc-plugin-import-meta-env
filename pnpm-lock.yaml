@@ -39,8 +39,8 @@ importers:
         specifier: 19.3.0
         version: 19.3.0(react@19.3.0)
       release-it:
-        specifier: 21.0.2
-        version: 21.0.2(@types/node@26.2.0)(supports-color@8.1.1)
+        specifier: 21.0.3
+        version: 21.0.3(@types/node@26.2.0)(supports-color@8.1.1)
 
 packages:
 
@@ -2034,8 +2034,8 @@ packages:
     resolution: {integrity: sha512-Kko+Y5XQ6fM+Ce3dq3m9YGxnacYZYl9cA1wZjaF3Vbry2L3i1qVg8+CAgNPsXRArPMUMCaOR7oa9Nqntc43JKA==}
     engines: {node: '>= 20.19.0'}
 
-  release-it@21.0.2:
-    resolution: {integrity: sha512-QwyDnWiQNB4d8Hc2b5FLMHcsKz9S2O1dMNnPB7w+0knsL5r8+qbnznDA1X7Bw5D863+Ud7eRHc71Cfth5Tlrgg==}
+  release-it@21.0.3:
+    resolution: {integrity: sha512-Pd5Uqj5hJmVAZzb+QSkkDgfvHJwRBazWryb90x5FYHhPxg35cE+1wX9v1DXk4ENy8C0osHxH/yRk1mvnZi7ZHQ==}
     engines: {node: ^22.21.0 || >=24.0.0}
     hasBin: true
 
@@ -4477,7 +4477,7 @@ snapshots:
 
   readdirp@5.1.1: {}
 
-  release-it@21.0.2(@types/node@26.2.0)(supports-color@8.1.1):
+  release-it@21.0.3(@types/node@26.2.0)(supports-color@8.1.1):
     dependencies:
       '@inquirer/prompts': 8.5.2(@types/node@26.2.0)
       '@octokit/rest': 22.0.1
