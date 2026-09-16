@@ -1215,9 +1215,9 @@ dependencies = [
 
 [[package]]
 name = "swc_core"
-version = "78.0.0"
+version = "79.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2b3e1cf21711152ac57d0ade1fea33bf8f1cc974f7bc1f668ac0252252876803"
+checksum = "f8a092a36affb31a770b9adc3e7d0dfab9f36b8397d9d93de22333cfa9ab1615"
 dependencies = [
  "swc_allocator",
  "swc_atoms",
@@ -1234,9 +1234,9 @@ dependencies = [
 
 [[package]]
 name = "swc_ecma_ast"
-version = "29.0.0"
+version = "29.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a6fd43fc7e90b9d5b252af666c147f5e2ee692add2b075f7f0d6fc2f5357bb6"
+checksum = "8acac181240497d98fddb7e6930f20cacbd12ed05288b5f9028e9cba23c7e09b"
 dependencies = [
  "bitflags",
  "cbor4ii",
@@ -1513,12 +1513,11 @@ dependencies = [
 
 [[package]]
 name = "swc_visit"
-version = "2.0.1"
+version = "2.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "62fb71484b486c185e34d2172f0eabe7f4722742aad700f426a494bb2de232a2"
+checksum = "e7df72a1be54e379864cebf04f26abb4d7ee637977f62f8ec8387233f7a27e88"
 dependencies = [
  "either",
- "new_debug_unreachable",
 ]
 
 [[package]]
