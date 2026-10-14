@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@happy-dom/jest-environment':
-        specifier: 20.14.6
-        version: 20.14.6(@jest/environment@30.5.2)(@jest/fake-timers@30.5.2)(@jest/types@30.5.1)(jest-mock@30.5.2)(jest-util@30.5.1)
+        specifier: 21.0.1
+        version: 21.0.1(@jest/environment@30.5.2)(@jest/fake-timers@30.5.2)(@jest/types@30.5.1)(jest-mock@30.5.2)(jest-util@30.5.1)
       '@swc/core':
         specifier: 1.16.18
         version: 1.16.18
@@ -222,8 +222,8 @@ packages:
   '@emnapi/wasi-threads@1.2.1':
     resolution: {integrity: sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w==}
 
-  '@happy-dom/jest-environment@20.14.6':
-    resolution: {integrity: sha512-u5Nys8dPx1af3ed3Dl44hssYAMx055UZDzc9nbrH8+IIovvIx2JzBvz48u9hcvWw3ZVX32qibMNjTaKicB5Lyw==}
+  '@happy-dom/jest-environment@21.0.1':
+    resolution: {integrity: sha512-Doiyrln0DTeYd1CYLRfczkyekbhiGJwBynx0q0DuI2rSToQMbud8o0kwytxMOdcCbu4S0NQ3+Jvxm6avB1fjpA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@jest/environment': '>=25.0.0'
@@ -1385,8 +1385,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@20.14.6:
-    resolution: {integrity: sha512-5DDsf4QmEIlRL6NkCv/fxSjYHHkZceL/IaYQdJc2h3G7DRTEai++VTjbfL0LB9geW2VrA3+vrjF3Efx+OTtX0Q==}
+  happy-dom@21.0.1:
+    resolution: {integrity: sha512-pRBs/u9fhrncyByOl58DMex0R2uAj6ZPKWIjV5j5yNGZBqLw3P6BTRhlc0DD5b/Ht4/6JYTMuE2LJhUWRC6SGw==}
     engines: {node: '>=20.0.0'}
 
   has-flag@4.0.0:
@@ -2452,12 +2452,12 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@happy-dom/jest-environment@20.14.6(@jest/environment@30.5.2)(@jest/fake-timers@30.5.2)(@jest/types@30.5.1)(jest-mock@30.5.2)(jest-util@30.5.1)':
+  '@happy-dom/jest-environment@21.0.1(@jest/environment@30.5.2)(@jest/fake-timers@30.5.2)(@jest/types@30.5.1)(jest-mock@30.5.2)(jest-util@30.5.1)':
     dependencies:
       '@jest/environment': 30.5.2
       '@jest/fake-timers': 30.5.2
       '@jest/types': 30.5.1
-      happy-dom: 20.14.6
+      happy-dom: 21.0.1
       jest-mock: 30.5.2
       jest-util: 30.5.1
     transitivePeerDependencies:
@@ -3590,7 +3590,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.3
 
-  happy-dom@20.14.6:
+  happy-dom@21.0.1:
     dependencies:
       '@types/node': 26.6.4
       '@types/whatwg-mimetype': 3.0.2
